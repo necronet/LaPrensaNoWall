@@ -3,7 +3,8 @@ function waitForElementToDisplay(selector, time) {
         if(element) {
           element.parentElement.removeChild(element);
           element = document.querySelector('div.tp-backdrop.tp-active');
-          element.parentElement.removeChild(element);
+	  if (element)
+              element.parentElement.removeChild(element);
           return;
         }
         else {
